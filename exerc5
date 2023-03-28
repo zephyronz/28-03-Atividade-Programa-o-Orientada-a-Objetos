@@ -1,0 +1,55 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+
+
+        Scanner sc = new Scanner(System.in);
+        int opc = 0;
+        while (opc != 3) {
+            System.out.println("Menu de opções:");
+            System.out.println("1- Média aritmética");
+            System.out.println("2- Média Ponderada");
+            System.out.println("3- Sair");
+            System.out.print("Digite a opção desejada");
+            opc = sc.nextInt();
+
+            if (opc == 1) {
+                System.out.println("Digite a primeira nota:");
+                double nota1 = sc.nextDouble();
+                System.out.println(("Digit a segunda nota:"));
+                double nota2 = sc.nextDouble();
+                double media = (nota1 + nota2) / 2;
+                System.out.println("A média do aluno foi: " + media);
+
+            } else if (opc == 2) {
+                System.out.print(("Digite a primeira nota:"));
+                double nota1 = sc.nextDouble();
+                System.out.print(("Digite o primeiro  peso:"));
+                double peso1 = sc.nextDouble();
+                System.out.print(("Digite a segunda nota:"));
+                double nota2 = sc.nextDouble();
+                System.out.print(("Digite o segundo  peso:"));
+                double peso2 = sc.nextDouble();
+                System.out.print(("Digite a terceira nota:"));
+                double nota3 = sc.nextDouble();
+                System.out.print(("Digite o segundo  peso:"));
+                double peso3 = sc.nextDouble();
+                double media = (nota1 * peso1 + nota2 * peso2 + nota3 * peso3) / (peso1 + peso2 + peso3);
+                System.out.println("A média ponderada é:" + media);
+            }
+
+            else if(opc ==3){
+                break;
+
+
+            }
+            else{
+                System.out.println("Opção invalida, digite novamente.");
+            }
+
+        }
+        sc.close();
+
+    }
+}
