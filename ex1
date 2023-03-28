@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class ex1 {
+    public static void imc(){
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Diga o seu peso em kilos: ");
+        float peso = scan.nextFloat();
+        System.out.println("Diga a sua altura em metros: ");
+        float altura = scan.nextFloat();
+
+        float imc = peso / (altura * altura);
+
+        if (imc < 18.5){
+            System.out.println("IMC = " + imc + ", Situação: Magro");
+        }
+        if (imc >= 18.5 && imc < 24.9){
+            System.out.println("IMC = " + imc + ", Situação: Normal");
+        }
+        if (imc >= 25 && imc < 20.0){
+            System.out.println("IMC = " + imc + ", Situação: Sobrepeso");
+        }
+        if (imc >= 30 && imc < 34.9){
+            System.out.println("IMC = " + imc + ", Situação: Obeso");
+        }
+        if (imc >= 35){
+            System.out.println("IMC = " + imc + ", Situação: Obisade Mórbida");
+        }
+    }
+}
