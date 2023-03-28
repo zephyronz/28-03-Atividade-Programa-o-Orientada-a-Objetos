@@ -1,0 +1,20 @@
+    import java.util.Scanner;
+
+    public class Main {
+        public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Digite o elemento numérico da progressão:");
+            double elementoInicial = input.nextDouble();
+
+
+            System.out.println("Digite o valor da razão:");
+            double valorRazao = input.nextDouble();
+            System.out.println("A progressão geométrica é:");
+
+
+            for(int i = 0; i<10; i++){
+                double valor = elementoInicial * Math.pow(valorRazao, i);
+                System.out.println(valor);
+            }
+        }
+    }
